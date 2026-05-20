@@ -6,22 +6,61 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Deep Learning',
-      items: ['deep-learning/intro'],
+      link: {
+        type: 'doc',
+        id: 'deep-learning/intro',
+      },
+      items: [
+        'deep-learning/neural-network-basics',
+        'deep-learning/backpropagation',
+        'deep-learning/optimization',
+        'deep-learning/cnn',
+        'deep-learning/rnn-lstm-gru',
+        'deep-learning/transformer',
+      ],
     },
     {
       type: 'category',
       label: 'NLP',
-      items: ['nlp/intro'],
+      link: {
+        type: 'doc',
+        id: 'nlp/intro',
+      },
+      items: [
+        'nlp/tokenization',
+        'nlp/word-embedding',
+        'nlp/attention',
+        'nlp/bert',
+        'nlp/gpt',
+        'nlp/rag',
+      ],
     },
     {
       type: 'category',
       label: 'Paper Reading',
-      items: ['paper-reading/intro'],
+      link: {
+        type: 'doc',
+        id: 'paper-reading/intro',
+      },
+      items: [
+        'paper-reading/attention-is-all-you-need',
+        'paper-reading/bert',
+        'paper-reading/gpt-series',
+      ],
     },
     {
       type: 'category',
       label: 'Projects',
-      items: ['projects/intro'],
+      link: {
+        type: 'doc',
+        id: 'projects/intro',
+      },
+      items: [
+        'projects/text-classification',
+        'projects/sentiment-analysis',
+        'projects/machine-translation',
+        'projects/rag-qa-system',
+      ],
     },
   ],
 };

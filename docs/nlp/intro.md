@@ -6,14 +6,14 @@ sidebar_position: 1
 
 这里用于整理 Natural Language Processing 的学习笔记。
 
-## 计划内容
+## 学习路线
 
-- Tokenization
-- Word Embedding
-- Attention
-- BERT
-- GPT
-- Retrieval-Augmented Generation
+- [Tokenization](./tokenization)
+- [Word Embedding](./word-embedding)
+- [Attention](./attention)
+- [BERT](./bert)
+- [GPT](./gpt)
+- [Retrieval-Augmented Generation](./rag)
 
 ## 记录方式
 

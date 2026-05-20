@@ -61,11 +61,29 @@ const config: Config = {
     navbar: {
       title: '10drbob',
       items: [
+        {to: '/', label: 'Home', position: 'left'},
         {
-          type: 'docSidebar',
-          sidebarId: 'notesSidebar',
+          type: 'dropdown',
           position: 'left',
           label: 'Notes',
+          items: [
+            {
+              label: 'Notes Overview',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Deep Learning',
+              to: '/docs/deep-learning/intro',
+            },
+            {
+              label: 'NLP',
+              to: '/docs/nlp/intro',
+            },
+            {
+              label: 'Paper Reading',
+              to: '/docs/paper-reading/intro',
+            },
+          ],
         },
         {to: '/docs/projects/intro', label: 'Projects', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
