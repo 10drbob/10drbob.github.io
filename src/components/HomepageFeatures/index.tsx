@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 
 type CardItem = {
   title: string;
-  link?: string;
+  link: string;
   description: ReactNode;
 };
 
@@ -14,79 +14,72 @@ const learningFocus: CardItem[] = [
   {
     title: 'Deep Learning',
     link: '/docs/deep-learning/intro',
-    description: '记录 neural networks、optimization、CNN、RNN、Transformer 等基础主题。',
+    description: '整理 neural networks、optimization、CNN、RNN 和 Transformer 等基础主题。',
   },
   {
     title: 'Natural Language Processing',
     link: '/docs/nlp/intro',
-    description: '整理 tokenization、embedding、attention、BERT、GPT 和 RAG 的学习笔记。',
+    description: '记录 tokenization、embedding、attention、BERT、GPT 和 NLP applications。',
   },
   {
-    title: 'Paper Reading',
-    link: '/docs/paper-reading/intro',
-    description: '沉淀论文阅读摘要、方法拆解、实验设置和可复现问题。',
+    title: 'Large Language Models',
+    link: '/docs/nlp/gpt',
+    description: '围绕 GPT、prompting、generation 和 LLM application workflow 持续积累。',
   },
   {
-    title: 'AI Projects',
-    link: '/docs/projects/intro',
-    description: '为文本分类、情感分析、机器翻译和 RAG QA 等项目保留展示入口。',
+    title: 'Retrieval-Augmented Generation',
+    link: '/docs/nlp/rag',
+    description: '记录 document chunking、embedding、retrieval、reranking 和 answer generation。',
   },
 ];
 
 const featuredProjects: CardItem[] = [
   {
     title: 'BERT Sentiment Analysis',
-    link: '/docs/projects/intro',
-    description: '计划实现基于 BERT 的 sentiment analysis 项目，并记录数据、训练和误差分析。',
+    link: '/docs/projects/sentiment-analysis',
+    description: 'Planned: 基于 BERT fine-tuning 的 sentiment classification 项目。',
   },
   {
     title: 'Text Classification Pipeline',
-    link: '/docs/projects/intro',
-    description: '计划整理从数据清洗、baseline、模型训练到评估报告的文本分类流程。',
+    link: '/docs/projects/text-classification',
+    description: 'Planned: 从 preprocessing、baseline 到 evaluation 的文本分类流程。',
   },
   {
     title: 'RAG Question Answering System',
-    link: '/docs/projects/intro',
-    description: '计划构建 embedding、retrieval 和 LLM response 组合的问答系统。',
+    link: '/docs/projects/rag-qa-system',
+    description: 'Planned: 结合 embedding、vector search 和 LLM generation 的 QA system。',
   },
 ];
 
 const latestNotes: CardItem[] = [
   {
-    title: 'Deep Learning Notes',
-    link: '/docs/deep-learning/intro',
-    description: '从核心概念和数学公式开始，逐步补充 PyTorch 示例。',
+    title: 'Transformer',
+    link: '/docs/deep-learning/transformer',
+    description: 'Self-attention、multi-head attention、positional encoding 和 Transformer block。',
   },
   {
-    title: 'NLP Notes',
-    link: '/docs/nlp/intro',
-    description: '围绕语言表示、序列建模、预训练模型和应用系统持续更新。',
+    title: 'BERT',
+    link: '/docs/nlp/bert',
+    description: 'Encoder-only Transformer、masked language modeling 和 fine-tuning。',
   },
   {
-    title: 'Paper Reading',
-    link: '/docs/paper-reading/intro',
-    description: '用固定模板记录论文问题、方法、实验和可迁移经验。',
+    title: 'Attention',
+    link: '/docs/nlp/attention',
+    description: 'Query、key、value、attention weight 和 sequence modeling 中的作用。',
+  },
+  {
+    title: 'RAG',
+    link: '/docs/nlp/rag',
+    description: 'Retrieval-Augmented Generation 的基本流程和项目实践入口。',
   },
 ];
 
 function InfoCard({title, link, description}: CardItem) {
-  const content = (
-    <>
+  return (
+    <Link className={styles.card} to={link}>
       <Heading as="h3">{title}</Heading>
       <p>{description}</p>
-    </>
-  );
-
-  return (
-    <div className={clsx('col', styles.cardColumn)}>
-      {link ? (
-        <Link className={styles.card} to={link}>
-          {content}
-        </Link>
-      ) : (
-        <div className={styles.card}>{content}</div>
-      )}
-    </div>
+    </Link>
   );
 }
 
@@ -110,7 +103,7 @@ function Section({
         </div>
         <div className="row">
           {items.map((item) => (
-            <div className={clsx(columns === 3 ? 'col col--4' : 'col col--3')} key={item.title}>
+            <div className={clsx(columns === 3 ? 'col col--4' : 'col col--3', styles.cardColumn)} key={item.title}>
               <InfoCard {...item} />
             </div>
           ))}
@@ -125,30 +118,34 @@ export default function HomepageFeatures(): ReactNode {
     <>
       <Section
         title="Learning Focus"
-        description="用稳定的文档结构长期积累课程笔记、论文阅读和项目复盘。"
+        description="把课程笔记、论文阅读和项目实践放在同一套长期可维护的知识结构里。"
         items={learningFocus}
       />
       <Section
         title="Featured Projects"
-        description="先建立项目入口和文档位置，后续再补充真实代码仓库、实验结果和在线 Demo。"
+        description="先建立清晰的项目入口，后续只补充真实完成的代码、实验记录和 Demo。"
         items={featuredProjects}
         columns={3}
       />
       <Section
         title="Latest Notes"
-        description="当前先放置学习目录入口，后续每篇笔记会逐步补全。"
+        description="优先从 Transformer、BERT、Attention 和 RAG 这些主线内容开始扩展。"
         items={latestNotes}
-        columns={3}
       />
       <section className={styles.aboutSection}>
         <div className="container">
           <Heading as="h2">About Me</Heading>
           <p>
-            我正在系统学习 Deep Learning、NLP 和 LLM 应用开发，希望把课程知识、论文方法和项目实践都沉淀成可以复查、可以展示、也可以继续扩展的技术作品集。
+            我正在系统学习 Deep Learning、NLP 和 LLM 应用开发。这个网站会作为个人技术作品集，沉淀笔记、论文阅读、项目文档和未来的 Hugging Face Spaces Demo。
           </p>
-          <Link className="button button--outline button--primary" to="/about">
-            More About This Site
-          </Link>
+          <div className={styles.aboutActions}>
+            <Link className="button button--outline button--primary" to="/about">
+              More About This Site
+            </Link>
+            <Link className="button button--primary" to="/projects">
+              View Project Portfolio
+            </Link>
+          </div>
         </div>
       </section>
     </>

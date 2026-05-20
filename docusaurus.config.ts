@@ -85,7 +85,7 @@ const config: Config = {
             },
           ],
         },
-        {to: '/docs/projects/intro', label: 'Projects', position: 'left'},
+        {to: '/projects', label: 'Projects', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
@@ -120,6 +120,10 @@ const config: Config = {
           items: [
             {
               label: 'Projects',
+              to: '/projects',
+            },
+            {
+              label: 'Project Docs',
               to: '/docs/projects/intro',
             },
             {

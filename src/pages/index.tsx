@@ -16,17 +16,15 @@ function HomepageHeader() {
         <Heading as="h1" className={styles.heroTitle}>
           10drbob
         </Heading>
-        <p className={styles.heroSubtitle}>
-          Deep Learning / NLP / LLM Notes & Practical AI Projects
-        </p>
+        <p className={styles.heroSubtitle}>Deep Learning / NLP / LLM Notes & Practical AI Projects</p>
         <p className={styles.heroText}>
-          这里用于长期整理深度学习、自然语言处理、论文阅读和实战项目记录。内容会从课程笔记、复现实验和项目文档开始，逐步扩展到 Hugging Face Spaces Demo。
+          这里用于长期整理 Deep Learning、NLP、LLM 课程笔记、论文阅读和 practical AI projects。项目会先从可复查的文档和代码记录开始，再逐步扩展到 Hugging Face Spaces Demo。
         </p>
         <div className={styles.buttons}>
           <Link className="button button--primary button--lg" to="/docs/intro">
             Start Reading Notes
           </Link>
-          <Link className="button button--secondary button--lg" to="/docs/projects/intro">
+          <Link className="button button--secondary button--lg" to="/projects">
             View Projects
           </Link>
         </div>
