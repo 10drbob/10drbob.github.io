@@ -13,6 +13,7 @@ const config: Config = {
 
   url: 'https://fdghu.github.io',
   baseUrl: '/',
+  trailingSlash: false,
 
   organizationName: 'fdghu',
   projectName: 'fdghu.github.io',
