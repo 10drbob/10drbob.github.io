@@ -1,4 +1,4 @@
-# fdghu | Deep Learning & NLP Notes
+# 10drbob | Deep Learning & NLP Notes
 
 这是一个基于 Docusaurus + TypeScript 的个人技术网站，用来整理 Deep Learning / NLP 课程笔记、论文阅读、实战项目和未来的 Hugging Face Spaces Demo。
 

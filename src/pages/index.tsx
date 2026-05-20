@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <p className={styles.eyebrow}>Personal AI Learning Portfolio</p>
         <Heading as="h1" className={styles.heroTitle}>
-          fdghu
+          10drbob
         </Heading>
         <p className={styles.heroSubtitle}>
           Deep Learning / NLP / LLM Notes & Practical AI Projects

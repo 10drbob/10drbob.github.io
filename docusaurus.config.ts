@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'fdghu | Deep Learning & NLP Notes',
+  title: '10drbob | Deep Learning & NLP Notes',
   tagline: 'Learning Deep Learning, NLP, LLMs, and building practical AI projects.',
   favicon: 'img/favicon.ico',
 
@@ -11,12 +11,12 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://fdghu.github.io',
+  url: 'https://10drbob.github.io',
   baseUrl: '/',
   trailingSlash: false,
 
-  organizationName: 'fdghu',
-  projectName: 'fdghu.github.io',
+  organizationName: '10drbob',
+  projectName: '10drbob.github.io',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -59,7 +59,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'fdghu',
+      title: '10drbob',
       items: [
         {
           type: 'docSidebar',
@@ -71,7 +71,7 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
-          href: 'https://github.com/fdghu',
+          href: 'https://github.com/10drbob',
           label: 'GitHub',
           position: 'right',
         },
@@ -119,7 +119,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/fdghu',
+              href: 'https://github.com/10drbob',
             },
             {
               label: 'Start Here',
@@ -128,7 +128,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} fdghu. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 10drbob. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
