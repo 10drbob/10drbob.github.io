@@ -1,0 +1,9 @@
+site:
+  label: Site
+  permalink: /site
+  description: 网站建设记录
+
+learning:
+  label: Learning
+  permalink: /learning
+  description: 学习记录和阶段总结
