@@ -5,6 +5,11 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
+      label: 'Examples',
+      items: ['examples/technical-writing-demo'],
+    },
+    {
+      type: 'category',
       label: 'Deep Learning',
       link: {
         type: 'doc',

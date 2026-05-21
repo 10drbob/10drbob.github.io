@@ -1,12 +1,15 @@
 # 10drbob | Deep Learning & NLP Notes
 
-这是一个基于 Docusaurus + TypeScript 的个人技术网站，用来整理 Deep Learning / NLP 课程笔记、论文阅读、实战项目和未来的 Hugging Face Spaces Demo。
+这是一个基于 Docusaurus + TypeScript 的个人 AI 技术作品集，用来整理 Deep Learning、NLP、LLM、RAG 相关笔记，以及正在规划和逐步实现的实践项目。
 
 ## 技术栈
 
 - Docusaurus 3
 - React + TypeScript
 - Markdown / MDX
+- KaTeX math rendering
+- Prism code highlighting
+- Mermaid diagrams
 - GitHub Pages
 - GitHub Actions
 
@@ -38,105 +41,91 @@ npm run typecheck
 
 构建结果会输出到 `build/` 目录。`build/`、`node_modules/` 和 `.docusaurus/` 不需要提交。
 
+## 技术写作格式
+
+### 数学公式
+
+行内公式使用单个 `$` 包裹：
+
+```md
+Self-attention 的缩放因子是 $\sqrt{d_k}$。
+```
+
+块级公式使用 `$$` 包裹：
+
+```md
+$$
+\operatorname{Attention}(Q, K, V) =
+\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+$$
+```
+
+### 代码高亮
+
+代码块使用三个反引号，并在开头写语言名。Python 和 PyTorch 示例都建议使用 `python` 高亮：
+
+````md
+```python
+import torch
+
+x = torch.randn(2, 4)
+print(x.shape)
+```
+````
+
+也可以给代码块加标题：
+
+````md
+```python title="attention.py"
+def attention(query, key, value):
+    return query @ key.transpose(-2, -1)
+```
+````
+
+### Mermaid 图
+
+Mermaid 图使用 `mermaid` 代码块：
+
+````md
+```mermaid
+flowchart TD
+    A["Input tokens"] --> B["Embedding"]
+    B --> C["Self-attention"]
+    C --> D["Output"]
+```
+````
+
+可以参考 `docs/examples/technical-writing-demo.md` 查看完整示例页面。
+
 ## 当前结构
 
 ```text
 docs/
-├── deep-learning/
-├── nlp/
-├── paper-reading/
-└── projects/
+├─ examples/
+├─ deep-learning/
+├─ nlp/
+├─ paper-reading/
+└─ projects/
 ```
 
-首页入口在 `src/pages/index.tsx`，首页卡片组件在 `src/components/HomepageFeatures/`。
+首页入口在 `src/pages/index.tsx`，项目展示页在 `src/pages/projects.tsx`，项目卡片组件在 `src/components/ProjectCard.tsx`。
 
 ## 内容维护原则
 
 1. 课程笔记和论文阅读优先写在 `docs/`。
-2. 项目展示先写清楚问题、方法和计划，不要编造未完成的实验结果。
-3. Blog 用于记录阶段性学习总结和网站维护日志。
-4. 未来有交互 Demo 时，优先用 Hugging Face Spaces，再嵌入主站。
+2. 项目展示先写清楚问题、方法和计划，不要把未完成项目写成已完成。
+3. 不写未经复核的实验指标，不伪造在线 Demo。
+4. 不上传课程课件原文、内部资料、原始数据、模型权重或 secrets。
+5. Blog 用于记录阶段性学习总结和网站维护日志。
 
-## 部署到 GitHub Pages
+## GitHub Pages 部署说明
 
-本项目使用 GitHub Actions 构建 Docusaurus，并通过 GitHub 官方 Pages artifact 部署方式发布 `build/` 目录。不使用 `gh-pages` 分支，也不提交构建产物。
-
-### 1. 创建 GitHub 仓库
-
-推荐创建用户主页仓库：
+本项目通过 GitHub Actions 构建 Docusaurus，并使用 GitHub Pages artifact 发布 `build/` 目录。当前站点部署到：
 
 ```text
-<GITHUB_USERNAME>.github.io
+https://10drbob.github.io/
 ```
 
-如果使用用户主页仓库，部署后的地址通常是：
+当前仓库使用用户主页形式，`docusaurus.config.ts` 中的 `baseUrl` 保持为 `/`。除非部署目标发生变化，否则不要修改 GitHub Pages 或 GitHub Actions 部署配置。
 
-```text
-https://<GITHUB_USERNAME>.github.io/
-```
-
-此时 Docusaurus 配置应保持：
-
-```ts
-baseUrl: '/'
-projectName: '<GITHUB_USERNAME>.github.io'
-```
-
-如果使用普通项目仓库，例如 `personal-ai-site`，部署地址通常是：
-
-```text
-https://<GITHUB_USERNAME>.github.io/personal-ai-site/
-```
-
-这时需要把 `docusaurus.config.ts` 里的 `baseUrl` 改成：
-
-```ts
-baseUrl: '/personal-ai-site/'
-```
-
-### 2. 添加 remote 并推送
-
-把 `<GITHUB_USERNAME>` 替换成你的 GitHub 用户名：
-
-```bash
-git remote add origin https://github.com/<GITHUB_USERNAME>/<GITHUB_USERNAME>.github.io.git
-git push -u origin main
-```
-
-### 3. 设置 GitHub Pages Source
-
-在 GitHub 网页端进入仓库：
-
-```text
-Settings → Pages → Build and deployment → Source → GitHub Actions
-```
-
-保存后，后续每次 push 到 `main` 分支都会触发 `.github/workflows/deploy.yml`。
-
-### 4. 查看部署结果
-
-第一次 push 后，进入仓库的 `Actions` 页面，打开 `Deploy to GitHub Pages` 工作流查看日志。
-
-部署成功后，可以在 workflow 的 `Deploy to GitHub Pages` job 里看到 Pages URL。用户主页仓库的最终网站地址通常是：
-
-```text
-https://<GITHUB_USERNAME>.github.io/
-```
-
-## GitHub Actions 说明
-
-`.github/workflows/deploy.yml` 的流程是：
-
-1. checkout 当前仓库。
-2. 使用 Node.js LTS 安装环境。
-3. 通过 `npm ci` 安装依赖。
-4. 执行 `npm run build` 生成静态网站。
-5. 上传 `build/` 作为 GitHub Pages artifact。
-6. 使用 GitHub 官方 `actions/deploy-pages` 部署。
-
-## 常见问题
-
-- 如果部署后样式丢失，先检查 `baseUrl` 是否和仓库类型匹配。
-- 如果 Actions 没有运行，检查是否已经 push 到 `main` 分支。
-- 如果 Pages 没有更新，检查 Settings → Pages 的 Source 是否为 GitHub Actions。
-- 如果 Windows 同步盘出现 EPERM，可以考虑把项目移动到非同步目录。
+每次 push 到 `main` 后，可以在仓库的 `Actions` 页面查看 `Deploy to GitHub Pages` 工作流运行状态。
