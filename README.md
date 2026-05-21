@@ -1,6 +1,6 @@
 # 10drbob | Deep Learning & NLP Notes
 
-这是 10drbob 的个人 AI 技术作品集网站，用来整理 Deep Learning、NLP、LLM、RAG 学习笔记，展示实践项目计划，并逐步接入经过复核的 Hugging Face Spaces Demo。
+这是 10drbob 的个人网站，用来整理 Deep Learning、NLP、LLM、RAG 学习笔记，展示实践项目计划，并逐步接入 Hugging Face Spaces Demo。
 
 站点地址：
 
@@ -152,7 +152,7 @@ npm run typecheck
    - 在线 Demo
    - 我学到了什么
    - 公开边界说明
-3. 在 `sidebars.ts` 的 `Projects` 分组中加入文档 id。
+3. 在 `sidebars.ts` 的 `项目` 分组中加入文档 id。
 4. 在 `src/pages/projects.tsx` 增加 `ProjectCard` 数据。
 5. 如果没有真实 GitHub 仓库、真实 Demo 或复核结果，使用 TODO 或占位说明，不要伪装成已完成。
 
