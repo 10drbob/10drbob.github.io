@@ -4,23 +4,28 @@ sidebar_position: 5
 
 # RAG Question Answering System
 
-## 项目简介
+## Status
 
-计划构建一个 RAG QA system，用于练习 document chunking、embedding、vector search、retrieval 和 LLM answer generation。
+Planned.
 
-## 当前状态
+## Project Goal
 
-Planned。
+Build a retrieval-augmented question answering system that can answer questions from a small document collection while
+showing the retrieved context.
 
-## 待补充
+## Planned Scope
 
-- TODO: 文档数据来源。
-- TODO: chunking 和 embedding 方案。
-- TODO: retrieval pipeline。
-- TODO: answer generation 和引用展示。
-- TODO: GitHub Repo 链接。
+- Select a document set that can be safely published or summarized.
+- Implement chunking, embeddings, vector search, and top-k retrieval.
+- Add answer generation with citation or context display.
+- Evaluate retrieval quality and answer faithfulness with simple, inspectable cases.
+- Publish a demo only after the full pipeline is working.
 
-## 关联主题
+## Current Notes
+
+No retrieval results, answer examples, or demo links have been added yet.
+
+## Related Notes
 
 - [RAG](../nlp/rag)
 - [GPT](../nlp/gpt)

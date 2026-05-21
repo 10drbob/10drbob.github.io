@@ -4,17 +4,18 @@ sidebar_position: 4
 
 # Attention
 
-## 本页目标
+## Goal
 
-整理 attention mechanism 的基本思想，以及它在 seq2seq、Transformer 和 LLM 中的作用。
+Explain the attention mechanism and why it is useful in sequence modeling, Seq2Seq models, Transformers, and LLMs.
 
-## 待补充
+## To Expand
 
-- TODO: 解释 query、key、value。
-- TODO: 对比 additive attention 和 scaled dot-product attention。
-- TODO: 说明 attention weight 的可解释性边界。
+- Define query, key, and value.
+- Compare additive attention and scaled dot-product attention.
+- Explain attention weights and their interpretation limits.
+- Connect attention to Transformer blocks.
 
-## 关联主题
+## Related Notes
 
 - [Transformer](../deep-learning/transformer)
 - [Attention Is All You Need](../paper-reading/attention-is-all-you-need)

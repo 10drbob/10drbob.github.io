@@ -4,17 +4,29 @@ sidebar_position: 1
 
 # Projects
 
-这里用于展示 Deep Learning / NLP 实战项目。
+This section documents practical AI project entries for the portfolio.
 
-## 项目列表
+## Planned AI Projects
 
 - [Text Classification Pipeline](./text-classification)
 - [BERT Sentiment Analysis](./sentiment-analysis)
 - [Machine Translation Demo](./machine-translation)
 - [RAG Question Answering System](./rag-qa-system)
 
-## 展示原则
+These pages are planning entries. They do not claim finished experiments, metrics, or demos.
 
-每个项目后续都会尽量补充项目简介、问题定义、数据集、方法概览、模型结构、训练过程、实验结果、错误分析、GitHub Repo 和在线 Demo。
+## Learning Project Archive
 
-当前这些页面仍是计划入口；只有真实完成的实验才会写入结果。
+- [Image Captioning with Attention](./image-captioning)
+- [SRGAN Super Resolution](./srgan-super-resolution)
+- [Decision Tree Game Outcome Prediction](./decision-tree-lol)
+
+These pages summarize selected local learning-project materials that are suitable for a public portfolio page. Raw
+course slides, private datasets, model weights, virtual environments, and large generated artifacts are not copied into
+the site.
+
+## Publishing Rule
+
+Each project page should eventually include the problem definition, dataset source, method, implementation notes,
+training or evaluation record, limitations, GitHub repository, and demo link when available. Results should only be
+added after the underlying code, logs, and artifacts are ready to review.

@@ -1,7 +1,6 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
@@ -12,13 +11,14 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <p className={styles.eyebrow}>Personal AI Learning Portfolio</p>
+        <p className={styles.eyebrow}>Personal AI Technology Portfolio</p>
         <Heading as="h1" className={styles.heroTitle}>
           10drbob
         </Heading>
         <p className={styles.heroSubtitle}>Deep Learning / NLP / LLM Notes & Practical AI Projects</p>
         <p className={styles.heroText}>
-          这里用于长期整理 Deep Learning、NLP、LLM 课程笔记、论文阅读和 practical AI projects。项目会先从可复查的文档和代码记录开始，再逐步扩展到 Hugging Face Spaces Demo。
+          A compact home for study notes, paper reading, implementation records, and practical AI projects. The
+          portfolio keeps planned work clearly separated from completed experiments.
         </p>
         <div className={styles.buttons}>
           <Link className="button button--primary button--lg" to="/docs/intro">
@@ -34,9 +34,8 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout title="Home" description={siteConfig.tagline}>
+    <Layout title="10drbob" description="Deep Learning, NLP, LLM notes, and practical AI projects">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

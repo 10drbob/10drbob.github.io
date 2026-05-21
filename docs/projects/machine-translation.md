@@ -4,23 +4,28 @@ sidebar_position: 4
 
 # Machine Translation Demo
 
-## 项目简介
+## Status
 
-计划构建一个 machine translation demo，用于练习 seq2seq、attention 和 Transformer 在序列生成任务中的应用。
+Planned.
 
-## 当前状态
+## Project Goal
 
-Planned。
+Build a compact machine translation demo to compare sequence-to-sequence modeling with Transformer-style translation
+workflows.
 
-## 待补充
+## Planned Scope
 
-- TODO: 数据集和语言方向。
-- TODO: seq2seq baseline。
-- TODO: Transformer baseline。
-- TODO: BLEU 或其他 evaluation metrics。
-- TODO: GitHub Repo 链接。
+- Choose a small public parallel corpus and record the language direction.
+- Implement or adapt a Seq2Seq baseline.
+- Add a Transformer-style baseline or comparison path.
+- Evaluate with BLEU or another clearly explained metric.
+- Add example translations only after real model outputs are available.
 
-## 关联主题
+## Current Notes
+
+No training run or demo has been published yet. The page is only a project entry and roadmap.
+
+## Related Notes
 
 - [RNN / LSTM / GRU](../deep-learning/rnn-lstm-gru)
 - [Transformer](../deep-learning/transformer)

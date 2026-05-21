@@ -39,7 +39,13 @@ export default function ProjectCard({
         ))}
       </div>
       <div className={styles.actions}>
-        <a className="button button--primary button--sm" href={repoUrl} target="_blank" rel="noreferrer">
+        <a
+          className="button button--primary button--sm"
+          href={repoUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${title} GitHub repository placeholder`}
+        >
           GitHub Repo
         </a>
         <Link className="button button--secondary button--sm" to={docsUrl}>

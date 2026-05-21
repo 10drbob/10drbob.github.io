@@ -4,17 +4,19 @@ sidebar_position: 5
 
 # BERT
 
-## 本页目标
+## Goal
 
-整理 BERT 的基本结构、pre-training tasks 和 fine-tuning 思路。
+Summarize BERT as an encoder-only Transformer model and record how pre-training tasks connect to downstream
+fine-tuning.
 
-## 待补充
+## To Expand
 
-- TODO: 说明 masked language modeling。
-- TODO: 记录 encoder-only Transformer 的特点。
-- TODO: 关联 sentiment analysis 和 text classification 项目。
+- Explain masked language modeling.
+- Describe why bidirectional context matters.
+- Record a basic BERT fine-tuning workflow.
+- Connect this note to sentiment analysis and text classification projects.
 
-## 关联主题
+## Related Notes
 
 - [BERT Paper Reading](../paper-reading/bert)
 - [Sentiment Analysis](../projects/sentiment-analysis)

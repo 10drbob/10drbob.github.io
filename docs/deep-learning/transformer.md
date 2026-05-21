@@ -4,17 +4,19 @@ sidebar_position: 7
 
 # Transformer
 
-## 本页目标
+## Goal
 
-整理 Transformer 的核心结构，包括 self-attention、multi-head attention、positional encoding、feed-forward network 和 residual connection。
+Organize the core ideas behind the Transformer architecture, including self-attention, multi-head attention, positional
+encoding, feed-forward networks, residual connections, and layer normalization.
 
-## 待补充
+## To Expand
 
-- TODO: 拆解 scaled dot-product attention。
-- TODO: 说明 multi-head attention 为什么有用。
-- TODO: 对照阅读 [Attention Is All You Need](../paper-reading/attention-is-all-you-need)。
+- Explain scaled dot-product attention step by step.
+- Compare single-head and multi-head attention.
+- Show where positional encoding enters the model.
+- Connect this note to the original Transformer paper.
 
-## 关联主题
+## Related Notes
 
 - [Attention](../nlp/attention)
 - [BERT](../nlp/bert)

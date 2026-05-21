@@ -14,22 +14,22 @@ const learningFocus: CardItem[] = [
   {
     title: 'Deep Learning',
     link: '/docs/deep-learning/intro',
-    description: '整理 neural networks、optimization、CNN、RNN 和 Transformer 等基础主题。',
+    description: 'Neural networks, optimization, CNNs, RNNs, Transformers, and reproducible training practice.',
   },
   {
     title: 'Natural Language Processing',
     link: '/docs/nlp/intro',
-    description: '记录 tokenization、embedding、attention、BERT、GPT 和 NLP applications。',
+    description: 'Tokenization, embeddings, attention, BERT, GPT-style models, and text classification workflows.',
   },
   {
     title: 'Large Language Models',
     link: '/docs/nlp/gpt',
-    description: '围绕 GPT、prompting、generation 和 LLM application workflow 持续积累。',
+    description: 'LLM fundamentals, prompting patterns, generation behavior, and practical application notes.',
   },
   {
     title: 'Retrieval-Augmented Generation',
     link: '/docs/nlp/rag',
-    description: '记录 document chunking、embedding、retrieval、reranking 和 answer generation。',
+    description: 'Chunking, embeddings, vector search, retrieval quality, reranking, and grounded answer generation.',
   },
 ];
 
@@ -37,17 +37,17 @@ const featuredProjects: CardItem[] = [
   {
     title: 'BERT Sentiment Analysis',
     link: '/docs/projects/sentiment-analysis',
-    description: 'Planned: 基于 BERT fine-tuning 的 sentiment classification 项目。',
+    description: 'Planned BERT fine-tuning project for sentiment classification and error analysis.',
   },
   {
     title: 'Text Classification Pipeline',
     link: '/docs/projects/text-classification',
-    description: 'Planned: 从 preprocessing、baseline 到 evaluation 的文本分类流程。',
+    description: 'Planned end-to-end pipeline from preprocessing to baseline comparison and evaluation.',
   },
   {
     title: 'RAG Question Answering System',
     link: '/docs/projects/rag-qa-system',
-    description: 'Planned: 结合 embedding、vector search 和 LLM generation 的 QA system。',
+    description: 'Planned document QA system combining embeddings, vector retrieval, and LLM answer generation.',
   },
 ];
 
@@ -55,22 +55,22 @@ const latestNotes: CardItem[] = [
   {
     title: 'Transformer',
     link: '/docs/deep-learning/transformer',
-    description: 'Self-attention、multi-head attention、positional encoding 和 Transformer block。',
+    description: 'Self-attention, multi-head attention, positional encoding, and Transformer blocks.',
   },
   {
     title: 'BERT',
     link: '/docs/nlp/bert',
-    description: 'Encoder-only Transformer、masked language modeling 和 fine-tuning。',
+    description: 'Encoder-only Transformers, masked language modeling, and fine-tuning tasks.',
   },
   {
     title: 'Attention',
     link: '/docs/nlp/attention',
-    description: 'Query、key、value、attention weight 和 sequence modeling 中的作用。',
+    description: 'Query, key, value, attention weights, and how attention supports sequence modeling.',
   },
   {
     title: 'RAG',
     link: '/docs/nlp/rag',
-    description: 'Retrieval-Augmented Generation 的基本流程和项目实践入口。',
+    description: 'The basic retrieval-augmented generation workflow and project implementation entry point.',
   },
 ];
 
@@ -118,25 +118,26 @@ export default function HomepageFeatures(): ReactNode {
     <>
       <Section
         title="Learning Focus"
-        description="把课程笔记、论文阅读和项目实践放在同一套长期可维护的知识结构里。"
+        description="Core learning tracks that connect course notes, paper reading, and implementation practice."
         items={learningFocus}
       />
       <Section
         title="Featured Projects"
-        description="先建立清晰的项目入口，后续只补充真实完成的代码、实验记录和 Demo。"
+        description="Project entries are intentionally conservative: planned work stays planned until code, logs, and results exist."
         items={featuredProjects}
         columns={3}
       />
       <Section
         title="Latest Notes"
-        description="优先从 Transformer、BERT、Attention 和 RAG 这些主线内容开始扩展。"
+        description="Starting points for the main AI learning threads currently being organized."
         items={latestNotes}
       />
       <section className={styles.aboutSection}>
         <div className="container">
           <Heading as="h2">About Me</Heading>
           <p>
-            我正在系统学习 Deep Learning、NLP 和 LLM 应用开发。这个网站会作为个人技术作品集，沉淀笔记、论文阅读、项目文档和未来的 Hugging Face Spaces Demo。
+            I am building this site as a long-term AI learning portfolio. It collects Deep Learning, NLP, LLM,
+            paper-reading, and project documentation in one maintainable Docusaurus workspace.
           </p>
           <div className={styles.aboutActions}>
             <Link className="button button--outline button--primary" to="/about">

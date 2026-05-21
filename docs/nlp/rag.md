@@ -4,17 +4,18 @@ sidebar_position: 7
 
 # RAG
 
-## 本页目标
+## Goal
 
-整理 Retrieval-Augmented Generation 的基本流程：document chunking、embedding、retrieval、reranking 和 answer generation。
+Summarize Retrieval-Augmented Generation as a practical workflow for grounding LLM answers in external documents.
 
-## 待补充
+## To Expand
 
-- TODO: 说明为什么 RAG 可以缓解知识更新和幻觉问题。
-- TODO: 记录 dense retrieval、vector search、top-k retrieval 的基本概念。
-- TODO: 关联 RAG Question Answering System 项目。
+- Explain chunking and embedding choices.
+- Describe dense retrieval, vector search, and top-k retrieval.
+- Record simple retrieval-quality checks.
+- Connect the note to the planned RAG QA project.
 
-## 关联主题
+## Related Notes
 
 - [GPT](./gpt)
 - [RAG Question Answering System](../projects/rag-qa-system)

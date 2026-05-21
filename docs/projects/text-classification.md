@@ -4,23 +4,29 @@ sidebar_position: 2
 
 # Text Classification Pipeline
 
-## 项目简介
+## Status
 
-计划整理一个文本分类项目流程，覆盖数据清洗、feature / embedding、baseline model、深度学习模型、评估和错误分析。
+Planned.
 
-## 当前状态
+## Project Goal
 
-Planned。
+Create a reusable text classification workflow that covers data preparation, feature or embedding choices, baseline
+models, neural models, metrics, and error analysis.
 
-## 待补充
+## Planned Scope
 
-- TODO: 数据集来源和任务定义。
-- TODO: baseline 方法。
-- TODO: 模型训练流程。
-- TODO: evaluation metrics。
-- TODO: GitHub Repo 链接。
+- Define one clean classification task and dataset.
+- Build preprocessing steps for tokenization, normalization, and train/validation/test split.
+- Compare at least one classical machine learning baseline with one neural baseline.
+- Track metrics, confusion cases, and reproducible commands.
+- Publish a GitHub repository after the pipeline is complete.
 
-## 关联主题
+## Current Notes
+
+This is a portfolio placeholder. It should not include model-performance claims until the implementation and evaluation
+are actually finished.
+
+## Related Notes
 
 - [Tokenization](../nlp/tokenization)
 - [BERT](../nlp/bert)

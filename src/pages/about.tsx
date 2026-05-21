@@ -8,13 +8,16 @@ export default function About(): ReactNode {
       <main className="container margin-vert--xl">
         <Heading as="h1">About</Heading>
         <p>
-          这是 10drbob 的个人 Deep Learning / NLP 技术网站，用来长期整理课程笔记、论文阅读、项目实践和未来的模型 Demo。
+          This is 10drbob&apos;s personal AI learning portfolio for Deep Learning, NLP, LLM application notes, paper
+          reading, and practical projects.
         </p>
         <p>
-          当前阶段先搭建清晰的信息结构和可维护的 Docusaurus 站点。后续会逐步补充真实项目代码、实验记录、论文总结和 Hugging Face Spaces 嵌入 Demo。
+          The current stage focuses on a clean information architecture and maintainable Docusaurus pages. Project pages
+          will be expanded only when real code, experiment records, and reviewable artifacts are ready.
         </p>
         <p>
-          这个网站不会使用复杂后端或数据库，内容会尽量通过 Markdown / MDX 管理，方便持续更新。
+          Personal biography details can be updated after confirming the preferred name, education background, research
+          interests, contact links, and public-facing tone.
         </p>
       </main>
     </Layout>
