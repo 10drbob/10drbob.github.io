@@ -1,0 +1,19 @@
+__pycache__/
+.gradio/
+.env
+.venv/
+venv/
+
+# Do not commit model weights, checkpoints, datasets, or generated outputs.
+*.bin
+*.ckpt
+*.h5
+*.onnx
+*.pt
+*.pth
+*.safetensors
+checkpoints/
+data/
+datasets/
+models/
+outputs/
