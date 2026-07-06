@@ -5,8 +5,8 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
 const config: Config = {
-  title: '10drbob | Deep Learning & NLP Notes',
-  tagline: 'Learning Deep Learning, NLP, LLMs, and building practical AI projects.',
+  title: '10drbob | GeoAI & Spatiotemporal Research',
+  tagline: 'Academic portfolio in GeoAI, GIScience, spatiotemporal data, and urban computing',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -81,7 +81,7 @@ const config: Config = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Notes',
+          label: 'Technical Notes',
           items: [
             {
               label: 'Notes Overview',
@@ -101,7 +101,7 @@ const config: Config = {
             },
           ],
         },
-        {to: '/projects', label: 'Projects', position: 'left'},
+        {to: '/projects', label: 'Research', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
@@ -115,7 +115,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Technical Notes',
           items: [
             {
               label: 'Deep Learning',
@@ -132,14 +132,14 @@ const config: Config = {
           ],
         },
         {
-          title: 'Portfolio',
+          title: 'Academic Portfolio',
           items: [
             {
-              label: 'Projects',
+              label: 'Research',
               to: '/projects',
             },
             {
-              label: 'Project Docs',
+              label: 'Research Docs',
               to: '/docs/projects/intro',
             },
             {

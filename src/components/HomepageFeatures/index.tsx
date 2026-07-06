@@ -6,81 +6,69 @@ import styles from './styles.module.css';
 
 type CardItem = {
   title: string;
-  link: string;
+  link?: string;
   description: ReactNode;
 };
 
-const learningFocus: CardItem[] = [
+const researchFocus: CardItem[] = [
   {
-    title: 'Deep Learning',
-    link: '/docs/deep-learning/intro',
-    description: 'Neural networks, optimization, CNNs, RNNs, Transformers, and reproducible training practice.',
+    title: 'GeoAI & GIScience',
+    description: 'Applying AI and spatial analysis methods to understand geographic phenomena and urban systems.',
   },
   {
-    title: 'Natural Language Processing',
-    link: '/docs/nlp/intro',
-    description: 'Tokenization, embeddings, attention, BERT, GPT-style models, and text classification workflows.',
+    title: 'Spatiotemporal Data Mining',
+    description: 'Modeling spatial-temporal patterns in trajectories, environmental data, and urban dynamics.',
   },
   {
-    title: 'Large Language Models',
-    link: '/docs/nlp/gpt',
-    description: 'LLM fundamentals, prompting patterns, generation behavior, and practical application notes.',
+    title: 'UAV-based Crowd Behavior & Trajectory Prediction',
+    description:
+      'Studying human mobility and interaction patterns in dense crowd scenes under UAV views. Details will be released after publication.',
   },
   {
-    title: 'Retrieval-Augmented Generation',
-    link: '/docs/nlp/rag',
-    description: 'Chunking, embeddings, vector search, retrieval quality, reranking, and grounded answer generation.',
+    title: 'Urban Computing & Smart City',
+    description:
+      'Using spatial data, computational methods, and urban analytics to support smarter and more sustainable cities.',
   },
 ];
 
-const featuredProjects: CardItem[] = [
+const siteSections: CardItem[] = [
   {
-    title: 'BERT Sentiment Analysis',
-    link: '/docs/projects/sentiment-analysis',
-    description: 'Planned BERT fine-tuning project for sentiment classification and error analysis.',
+    title: 'Research Projects',
+    link: '/projects',
+    description:
+      'Public-facing project entries, with ongoing work kept at a high level until code, data, and results are ready to release.',
   },
   {
-    title: 'Text Classification Pipeline',
-    link: '/docs/projects/text-classification',
-    description: 'Planned end-to-end pipeline from preprocessing to baseline comparison and evaluation.',
+    title: 'Technical Notes',
+    link: '/docs/intro',
+    description:
+      'Selected technical notes that support my research preparation, including AI, spatial data methods, and reproducible practice.',
   },
   {
-    title: 'RAG Question Answering System',
-    link: '/docs/projects/rag-qa-system',
-    description: 'Planned document QA system combining embeddings, vector retrieval, and LLM answer generation.',
-  },
-];
-
-const latestNotes: CardItem[] = [
-  {
-    title: 'Transformer',
-    link: '/docs/deep-learning/transformer',
-    description: 'Self-attention, multi-head attention, positional encoding, and Transformer blocks.',
-  },
-  {
-    title: 'BERT',
-    link: '/docs/nlp/bert',
-    description: 'Encoder-only Transformers, masked language modeling, and fine-tuning tasks.',
-  },
-  {
-    title: 'Attention',
-    link: '/docs/nlp/attention',
-    description: 'Query, key, value, attention weights, and how attention supports sequence modeling.',
-  },
-  {
-    title: 'RAG',
-    link: '/docs/nlp/rag',
-    description: 'The basic retrieval-augmented generation workflow and project implementation entry point.',
+    title: 'About & Contact',
+    link: '/about',
+    description:
+      'A concise profile page for education background, research interests, links, and future PhD application materials.',
   },
 ];
 
 function InfoCard({title, link, description}: CardItem) {
-  return (
-    <Link className={styles.card} to={link}>
+  const cardContent = (
+    <>
       <Heading as="h3">{title}</Heading>
       <p>{description}</p>
-    </Link>
+    </>
   );
+
+  if (link) {
+    return (
+      <Link className={clsx(styles.card, styles.cardLink)} to={link}>
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return <article className={styles.card}>{cardContent}</article>;
 }
 
 function Section({
@@ -117,34 +105,31 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <>
       <Section
-        title="Learning Focus"
-        description="Core learning tracks that connect course notes, paper reading, and implementation practice."
-        items={learningFocus}
+        title="Research Focus"
+        description="My current academic direction connects GeoAI, GIScience, spatiotemporal modeling, and urban analytics."
+        items={researchFocus}
       />
       <Section
-        title="Featured Projects"
-        description="Project entries are intentionally conservative: planned work stays planned until code, logs, and results exist."
-        items={featuredProjects}
+        title="Site Sections"
+        description="The existing notes, project pages, and blog remain available, but the homepage now centers the academic research identity."
+        items={siteSections}
         columns={3}
-      />
-      <Section
-        title="Latest Notes"
-        description="Starting points for the main AI learning threads currently being organized."
-        items={latestNotes}
       />
       <section className={styles.aboutSection}>
         <div className="container">
-          <Heading as="h2">About Me</Heading>
+          <Heading as="h2">Academic Profile</Heading>
           <p>
-            I am building this site as a long-term AI learning portfolio. It collects Deep Learning, NLP, LLM,
-            paper-reading, and project documentation in one maintainable Docusaurus workspace.
+            I am a master&apos;s student in Geoinformation Engineering / GIS, preparing this website as a concise academic
+            portfolio for PhD applications. I am currently working on UAV-based crowd trajectory prediction and
+            spatiotemporal interaction modeling in dense crowd scenarios. More details will be released after
+            publication.
           </p>
           <div className={styles.aboutActions}>
             <Link className="button button--outline button--primary" to="/about">
-              More About This Site
+              About
             </Link>
             <Link className="button button--primary" to="/projects">
-              View Project Portfolio
+              Research Projects
             </Link>
           </div>
         </div>

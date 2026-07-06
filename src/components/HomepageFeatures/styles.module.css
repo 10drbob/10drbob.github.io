@@ -38,7 +38,7 @@
     transform 160ms ease;
 }
 
-.card:hover {
+.cardLink:hover {
   border-color: var(--ifm-color-primary);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   color: inherit;
@@ -46,7 +46,7 @@
   transform: translateY(-2px);
 }
 
-[data-theme='dark'] .card:hover {
+[data-theme='dark'] .cardLink:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 
