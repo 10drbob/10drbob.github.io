@@ -1,0 +1,126 @@
+.header {
+  max-width: 900px;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.section,
+.sidebar {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  padding: 1.5rem;
+}
+
+.section h2,
+.sidebar h2 {
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.75;
+}
+
+.interestList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interestList li {
+  border-left: 3px solid var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.75rem 0.9rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.sidebar {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+.sidebarIntro {
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.linkList {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.linkItem {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 0.85rem;
+}
+
+.linkItem:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.linkItem dt {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.linkItem dd {
+  margin: 0.2rem 0 0;
+  color: var(--ifm-color-emphasis-900);
+}
+
+@media screen and (max-width: 996px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .interestList {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .sidebar {
+    padding: 1.1rem;
+  }
+}
