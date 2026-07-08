@@ -78,6 +78,8 @@ const config: Config = {
       title: '10drbob',
       items: [
         {to: '/', label: 'Home', position: 'left'},
+        {to: '/publications', label: 'Publications', position: 'left'},
+        {to: '/projects', label: 'Research', position: 'left'},
         {
           type: 'dropdown',
           position: 'left',
@@ -101,7 +103,6 @@ const config: Config = {
             },
           ],
         },
-        {to: '/projects', label: 'Research', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/about', label: 'About', position: 'left'},
         {
@@ -134,6 +135,10 @@ const config: Config = {
         {
           title: 'Academic Portfolio',
           items: [
+            {
+              label: 'Publications',
+              to: '/publications',
+            },
             {
               label: 'Research',
               to: '/projects',

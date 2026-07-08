@@ -1,0 +1,120 @@
+.header {
+  max-width: 920px;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionHeader {
+  max-width: 860px;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+}
+
+.cardList {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  padding: 1.35rem;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  max-width: 780px;
+}
+
+.cardHeader span {
+  flex: 0 0 auto;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.card p,
+.disclosure p {
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.75;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.keywords li {
+  border-left: 3px solid var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.35rem 0.65rem;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+}
+
+.disclosure {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  padding: 1.35rem;
+}
+
+.disclosure h2 {
+  margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 760px) {
+  .cardHeader {
+    display: grid;
+  }
+
+  .cardHeader span {
+    justify-self: start;
+    white-space: normal;
+  }
+
+  .card,
+  .disclosure {
+    padding: 1.1rem;
+  }
+}
