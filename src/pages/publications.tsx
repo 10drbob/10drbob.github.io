@@ -13,10 +13,10 @@ type PublicationItem = {
 
 const publishedPlaceholders: PublicationItem[] = [
   {
-    title: 'Published papers will be listed here after bibliographic details are finalized',
+    title: 'Publication records pending final metadata',
     status: 'Published / accepted work',
     description:
-      'Selected spatial analysis and GIScience-related work will be added with full citation information, DOI, and public links when those details are available and safe to disclose.',
+      'Published papers will be listed here with full citation information, DOI, and links when available.',
     keywords: ['GIScience', 'Spatial analysis', 'Academic portfolio'],
   },
 ];
