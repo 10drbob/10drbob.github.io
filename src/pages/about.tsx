@@ -5,6 +5,13 @@ import Heading from '@theme/Heading';
 
 import styles from './about.module.css';
 
+type ContactLink = {
+  label: string;
+  value: string;
+  href?: string;
+  external?: boolean;
+};
+
 const researchInterests = [
   'GeoAI and GIScience',
   'Spatiotemporal data mining and modeling',
@@ -14,7 +21,7 @@ const researchInterests = [
   'Digital twin, BIM-GIS, and spatial data infrastructure',
 ];
 
-const contactLinks = [
+const contactLinks: ContactLink[] = [
   {
     label: 'Email',
     value: 'Available upon request',
@@ -23,6 +30,7 @@ const contactLinks = [
     label: 'GitHub',
     value: 'github.com/10drbob',
     href: 'https://github.com/10drbob',
+    external: true,
   },
   {
     label: 'Google Scholar',
@@ -38,7 +46,8 @@ const contactLinks = [
   },
   {
     label: 'CV',
-    value: 'Not published yet',
+    value: 'View CV',
+    href: '/cv',
   },
 ];
 
@@ -108,8 +117,12 @@ export default function About(): ReactNode {
                 <div className={styles.linkItem} key={item.label}>
                   <dt>{item.label}</dt>
                   <dd>
-                    {'href' in item && item.href ? (
-                      <Link to={item.href} target="_blank" rel="noreferrer">
+                    {item.href ? (
+                      <Link
+                        to={item.href}
+                        target={item.external ? '_blank' : undefined}
+                        rel={item.external ? 'noreferrer' : undefined}
+                      >
                         {item.value}
                       </Link>
                     ) : (
@@ -119,7 +132,6 @@ export default function About(): ReactNode {
                 </div>
               ))}
             </dl>
-            {/* TODO Day 3/5: add reviewed Publications and CV links only after public routes or files exist. */}
           </aside>
         </div>
       </main>

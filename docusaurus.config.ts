@@ -80,6 +80,7 @@ const config: Config = {
         {to: '/', label: 'Home', position: 'left'},
         {to: '/publications', label: 'Publications', position: 'left'},
         {to: '/projects', label: 'Research', position: 'left'},
+        {to: '/cv', label: 'CV', position: 'left'},
         {
           type: 'dropdown',
           position: 'left',
@@ -142,6 +143,10 @@ const config: Config = {
             {
               label: 'Research',
               to: '/projects',
+            },
+            {
+              label: 'CV',
+              to: '/cv',
             },
             {
               label: 'Research Docs',
